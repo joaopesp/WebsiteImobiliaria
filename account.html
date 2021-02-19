@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta - Imobiliária Jaú | Design de Website Não Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Imagens/logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Menu</a></li>
+                    <li><a href="products.html">Casas</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="account.html">Conta</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="Imagens/cart.png" width="30px" height="30px">
+        </div>
+    </div>
+
+    <div class="account-page">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-2">
+                    <img src="Imagens/imagem1.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Cadastrar</span>
+                            <hr id="indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="texto" placeholder="Usuário">
+                            <input type="senha" placeholder="Senha">
+                            <button type="enviar" class="btn">Login</button>
+                            <a href="">Esqueci a Senha</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="texto" placeholder="Usuário">
+                            <input type="email" placeholder="Email">
+                            <input type="senha" placeholder="Senha">
+                            <button type="enviar" class="btn">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Baixe nosso Aplicativo</h3>
+                    <p>Baixe Aplicativo para Android e IOS.</p>
+                    <div class="app-logo">
+                        <img src="Imagens/play-store.png">
+                        <img src="Imagens/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="Imagens/logo-white.png">
+                    <p>Nosso Propósito é manter o nível de qualidade dos nossos serviços sempre.
+                    </p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li>Descontos</li>
+                        <li>Post do Blog</li>
+                        <li>Política de Reembolso</li>
+                        <li>Fazer parte de afiliadas</li>
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Siga a Gente</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Site de imobiliária</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)"
+        };
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)"
+        };
+
+    </script>
+
+</body>
+
+</html>
